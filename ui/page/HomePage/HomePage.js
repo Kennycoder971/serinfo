@@ -1,23 +1,40 @@
 import React from "react";
 import styles from "./HomePage.module.scss";
-
+import UpcomingCard from "../../component/UpcomingCard/UpcomingCard";
 const HomePage = ({ error, upcomingFr, upcomingUs }) => {
   if (error) {
     return <h1>{error}</h1>;
   }
 
-  console.log(upcomingFr);
-
   return (
     <main className={styles.HomePage}>
       <section className={styles.france}>
-        <h1>Upcoming today in France</h1>
+        <h1>New Episodes today in France </h1>
 
-        <div className={styles.grid}></div>
+        <div className={styles.grid}>
+          {upcomingFr?.map((upcomingEpisode) => {
+            return (
+              <UpcomingCard
+                upcomingEpisode={upcomingEpisode}
+                key={upcomingEpisode.id}
+              />
+            );
+          })}
+        </div>
       </section>
 
       <section className={styles.usa}>
-        <h1>Upcoming today in the USA</h1>
+        <h1>New Episodes today in the USA</h1>
+        <div className={styles.grid}>
+          {upcomingUs?.map((upcomingEpisode) => {
+            return (
+              <UpcomingCard
+                upcomingEpisode={upcomingEpisode}
+                key={upcomingEpisode.id}
+              />
+            );
+          })}
+        </div>
       </section>
     </main>
   );

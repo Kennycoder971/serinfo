@@ -1,15 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './UpcomingCard.module.scss';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./UpcomingCard.module.scss";
 
-const UpcomingCard = () => (
-  <div className={styles.UpcomingCard}>
-    UpcomingCard Component
-  </div>
-);
+const UpcomingCard = ({ upcomingEpisode }) => {
+  const { number, season, _embedded } = upcomingEpisode;
 
-UpcomingCard.propTypes = {};
+  const { image, name, id } = _embedded.show;
 
-UpcomingCard.defaultProps = {};
+  return (
+    <div className={styles.UpcomingCard}>
+      <Link href="/">
+        <a>
+          <Image width={200} height={300} src={image.medium} />
+          <h4>{name}</h4>
+          <p>Episode {number}</p>
+          <p>Season {season}</p>
+        </a>
+      </Link>
+    </div>
+  );
+};
 
 export default UpcomingCard;

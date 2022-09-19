@@ -30,7 +30,6 @@ export default function Home() {
         addUpcomingFr(upcomingFr);
         addUpcomingUs(upcomingUs);
       } catch (error) {
-        console.log(error);
         setError("Something went wrong, try again later");
       }
     })();

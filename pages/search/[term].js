@@ -20,7 +20,6 @@ export default function Search() {
 
       setShows(shows);
     } catch (error) {
-      console.log(error);
       setError("Something went wrong, try again later");
     }
   }

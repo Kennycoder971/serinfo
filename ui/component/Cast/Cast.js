@@ -28,7 +28,7 @@ const Cast = ({ cast, error }) => {
                 />
 
                 <div className={styles.info}>
-                  <h4>{person.name}</h4> as <p>{character.name}</p>
+                  <strong>{person.name}</strong> as {character.name}
                 </div>
               </li>
             );

@@ -31,7 +31,7 @@ export default function Home() {
         addUpcomingUs(upcomingUs);
       } catch (error) {
         console.log(error);
-        setError("Something wrong happened, try again later");
+        setError("Something went wrong, try again later");
       }
     })();
   }, []);

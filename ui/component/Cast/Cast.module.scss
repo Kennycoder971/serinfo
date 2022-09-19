@@ -1,12 +1,12 @@
 .Cast {
 
     .grid {
-        
         margin: var(--xl-size) 0;
         margin-top: var(--m-size);
         display: grid;
         grid-template-columns: repeat(auto-fit, 200px);
         gap: 1rem;
+
 
         li {
             strong {

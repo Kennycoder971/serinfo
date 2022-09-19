@@ -23,8 +23,6 @@ export default function Show() {
         const castUrl = `${url}/cast`;
         const { data: castData, errorCast } = await axiosReq(castUrl, "get");
         if (errorCast) throw new Error();
-        console.log(castData);
-        console.log("hello");
         setCast(castData);
       } catch (error) {
         setError("Something went wrong, try again later");

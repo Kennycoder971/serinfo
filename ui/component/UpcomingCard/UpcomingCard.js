@@ -12,7 +12,11 @@ const UpcomingCard = ({ upcomingEpisode }) => {
     <div className={styles.UpcomingCard}>
       <Link href={`/shows/${id}`}>
         <a>
-          <Image width={200} height={300} src={image?.medium || ""} />
+          <Image
+            width={200}
+            height={300}
+            src={image?.medium || process.env.NEXT_PUBLIC_PLACEHOLDER}
+          />
           <h4>{name}</h4>
           <p>Episode {number}</p>
           <p>Season {season}</p>

@@ -10,7 +10,7 @@ const ShowPage = ({ show, cast }) => {
         <div className={styles.card}>
           <h1>{show?.name}</h1>
           <Image
-            src={show?.image?.medium || ""}
+            src={show?.image?.medium || process.env.NEXT_PUBLIC_PLACEHOLDER}
             height={350}
             width={250}
             alt={show?.name}

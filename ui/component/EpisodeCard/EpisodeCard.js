@@ -7,7 +7,11 @@ const EpisodeCard = ({ show }) => {
     <div className={styles.EpisodeCard}>
       <Link href={`/shows/${show?.id}`}>
         <a>
-          <Image src={show?.image?.medium || ""} height={300} width={200} />
+          <Image
+            src={show?.image?.medium || process.env.NEXT_PUBLIC_PLACEHOLDER}
+            height={300}
+            width={200}
+          />
 
           <h4>{show?.name}</h4>
         </a>

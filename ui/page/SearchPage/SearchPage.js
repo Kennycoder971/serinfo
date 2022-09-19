@@ -8,9 +8,13 @@ const SearchPage = ({ error, shows }) => {
 
   return (
     <div className={styles.SearchPage}>
-      {shows.map(({ show }) => {
-        return <EpisodeCard show={show} key={show.id} />;
-      })}
+      {shows.length === 0 ? (
+        <p>No results found</p>
+      ) : (
+        shows.map(({ show }) => {
+          return <EpisodeCard show={show} key={show.id} />;
+        })
+      )}
     </div>
   );
 };

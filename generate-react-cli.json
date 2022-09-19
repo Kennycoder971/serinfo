@@ -10,6 +10,13 @@
       "withTest": false,
       "withStory": false,
       "withLazy": false
+    },
+     "page": {
+      "path": "ui/page",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": false
     }
   }
 }

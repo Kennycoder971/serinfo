@@ -1,3 +1,5 @@
+import HomePage from "../ui/page/HomePage/HomePage";
+
 export default function Home() {
-  return <main>Hello</main>;
+  return <HomePage />;
 }

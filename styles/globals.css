@@ -1,3 +1,15 @@
+:root {
+  --primary-color: #0BC199;
+  --white:white;
+  --xs-size: 0.8rem;
+  --s-size: 1.2rem;
+  --m-size: 1.6rem;
+  --ml-size: 2.4rem;
+  --l-size: 3.6rem;
+  --xl-size: 4.8rem;
+  --xxl-size: 6.4rem;
+
+}
 html,
 body {
   padding: 0;
@@ -12,15 +24,8 @@ a {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}

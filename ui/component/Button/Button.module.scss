@@ -1,0 +1,13 @@
+.Button {
+    display: inline-block;
+    cursor: pointer;
+    padding: var(--xs-size) var(--m-size);
+    transition: .3s;
+    position: relative;
+    border: 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 5px;
+
+}

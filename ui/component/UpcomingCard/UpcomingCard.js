@@ -10,9 +10,9 @@ const UpcomingCard = ({ upcomingEpisode }) => {
 
   return (
     <div className={styles.UpcomingCard}>
-      <Link href="/">
+      <Link href={`/shows/${id}`}>
         <a>
-          <Image width={200} height={300} src={image.medium} />
+          <Image width={200} height={300} src={image?.medium || ""} />
           <h4>{name}</h4>
           <p>Episode {number}</p>
           <p>Season {season}</p>

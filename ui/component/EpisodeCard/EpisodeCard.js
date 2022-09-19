@@ -3,12 +3,11 @@ import styles from "./EpisodeCard.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 const EpisodeCard = ({ show }) => {
-  console.log(show);
   return (
     <div className={styles.EpisodeCard}>
-      <Link href={"/"}>
+      <Link href={`/shows/${show?.id}`}>
         <a>
-          <Image src={show?.image?.medium} height={300} width={200} />
+          <Image src={show?.image?.medium || ""} height={300} width={200} />
 
           <h4>{show?.name}</h4>
         </a>

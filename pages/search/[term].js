@@ -9,7 +9,10 @@ export default function Search() {
   const { term } = useContext(SerieContext);
 
   async function search() {
-    const url = `${process.env.NEXT_PUBLIC_API_URL}/search/shows?q=${term}`;
+    const urlTerm = location?.pathname.split("/search/").join("");
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/search/shows?q=${
+      term || urlTerm
+    }`;
     try {
       const { data: shows, error } = await axiosReq(url, "get");
 

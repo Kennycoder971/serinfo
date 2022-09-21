@@ -37,7 +37,7 @@ const Navbar = () => {
             changeTerm(e.target.value);
           }}
         />
-        <Button>Hello</Button>
+        <Button>Search</Button>
       </form>
     </nav>
   );

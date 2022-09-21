@@ -12,28 +12,36 @@ const HomePage = ({ error, upcomingFr, upcomingUs }) => {
         <h1>New Episodes today in France </h1>
 
         <div className={styles.grid}>
-          {upcomingFr?.map((upcomingEpisode) => {
-            return (
-              <UpcomingCard
-                upcomingEpisode={upcomingEpisode}
-                key={upcomingEpisode.id}
-              />
-            );
-          })}
+          {upcomingFr.length === 0 ? (
+            <p>Nothing for now</p>
+          ) : (
+            upcomingFr?.map((upcomingEpisode) => {
+              return (
+                <UpcomingCard
+                  upcomingEpisode={upcomingEpisode}
+                  key={upcomingEpisode.id}
+                />
+              );
+            })
+          )}
         </div>
       </section>
 
       <section className={styles.usa}>
         <h1>New Episodes today in the USA</h1>
         <div className={styles.grid}>
-          {upcomingUs?.map((upcomingEpisode) => {
-            return (
-              <UpcomingCard
-                upcomingEpisode={upcomingEpisode}
-                key={upcomingEpisode.id}
-              />
-            );
-          })}
+          {upcomingUs.length === 0 ? (
+            <p>Nothing for now</p>
+          ) : (
+            upcomingUs?.map((upcomingEpisode) => {
+              return (
+                <UpcomingCard
+                  upcomingEpisode={upcomingEpisode}
+                  key={upcomingEpisode.id}
+                />
+              );
+            })
+          )}
         </div>
       </section>
     </main>
